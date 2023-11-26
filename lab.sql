@@ -41,7 +41,7 @@ ALTER TABLE public.estoque OWNER TO postgres;
 --
 
 CREATE TABLE public.laboratorio (
-    idlaboratorio integer NOT NULL,
+    idlab integer NOT NULL,
     nomelab character varying(40) NOT NULL,
     endereco character varying(80),
     cidade character varying(80),
@@ -124,11 +124,11 @@ INSERT INTO public.estoque (nrolote, codproducao) VALUES (1, 1);
 -- Data for Name: laboratorio; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.laboratorio (idlaboratorio, nomelab, endereco, cidade, contato) VALUES (2, 'MediCorp Labs', 'R. Floriano Peixoto, 456', 'Sao Jose do Rio Preto', '(17) 9876-5432');
-INSERT INTO public.laboratorio (idlaboratorio, nomelab, endereco, cidade, contato) VALUES (3, 'GenoLab', 'R. Visc. de Mauá, 101 - América', 'Joinville ', '(47) 1234-5678');
-INSERT INTO public.laboratorio (idlaboratorio, nomelab, endereco, cidade, contato) VALUES (4, 'Cress', 'R. Pres. Prudente de Moraes, 209 - Santo Antônio', 'Joinville', '(47) 3435-3166');
-INSERT INTO public.laboratorio (idlaboratorio, nomelab, endereco, cidade, contato) VALUES (1, 'Morck ', 'Av. das Nacoes Unidas, 12995 - Pinheiros', 'Sao Paulo', '(11) 3346-8507');
-INSERT INTO public.laboratorio (idlaboratorio, nomelab, endereco, cidade, contato) VALUES (5, 'Aura Farma', 'R. Des. Costa Carvalho, 312 - Batel', 'Curitiba', '(41) 98765-4321');
+INSERT INTO public.laboratorio (idlab, nomelab, endereco, cidade, contato) VALUES (2, 'MediCorp Labs', 'R. Floriano Peixoto, 456', 'Sao Jose do Rio Preto', '(17) 9876-5432');
+INSERT INTO public.laboratorio (idlab, nomelab, endereco, cidade, contato) VALUES (3, 'GenoLab', 'R. Visc. de Mauá, 101 - América', 'Joinville ', '(47) 1234-5678');
+INSERT INTO public.laboratorio (idlab, nomelab, endereco, cidade, contato) VALUES (4, 'Cress', 'R. Pres. Prudente de Moraes, 209 - Santo Antônio', 'Joinville', '(47) 3435-3166');
+INSERT INTO public.laboratorio (idlab, nomelab, endereco, cidade, contato) VALUES (1, 'Morck ', 'Av. das Nacoes Unidas, 12995 - Pinheiros', 'Sao Paulo', '(11) 3346-8507');
+INSERT INTO public.laboratorio (idlab, nomelab, endereco, cidade, contato) VALUES (5, 'Aura Farma', 'R. Des. Costa Carvalho, 312 - Batel', 'Curitiba', '(41) 98765-4321');
 
 
 --
@@ -205,7 +205,7 @@ ALTER TABLE ONLY public.laboratorio
 --
 
 ALTER TABLE ONLY public.laboratorio
-    ADD CONSTRAINT laboratorios_pkey PRIMARY KEY (idlaboratorio);
+    ADD CONSTRAINT laboratorios_pkey PRIMARY KEY (idlab);
 
 
 --
