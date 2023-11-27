@@ -29,11 +29,11 @@ public class LaboratorioController {
         System.out.print("Nome do Laboratório: ");
         String nomelab = input.nextLine();
         System.out.print("Endereço: ");
-        String endereco = StrcheckForNull(input.nextLine());
+        String endereco = StrcheckForNull(input.nextLine().trim());
         System.out.print("Cidade: ");
-        String cidade = StrcheckForNull(input.nextLine());
+        String cidade = StrcheckForNull(input.nextLine().trim());
         System.out.print("Contato: ");
-        String contato = StrcheckForNull(input.nextLine());
+        String contato = StrcheckForNull(input.nextLine().trim());
         
         LaboratorioBean lb = new LaboratorioBean(idlab, nomelab, endereco, cidade, contato);
         LaboratorioModel.create(lb, con);
